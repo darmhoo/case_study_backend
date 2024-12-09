@@ -10,9 +10,15 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+
+        $newsList = Article::filter()->get();
+        return response()->json([
+            'articles' => $newsList,
+            'status' => 'success'
+        ], 200);
     }
 
     /**

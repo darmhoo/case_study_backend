@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AuthController\LoginController;
 use App\Http\Controllers\AuthController\RegisterController;
 use App\Services\GetNewsDataServices;
@@ -19,3 +20,5 @@ Route::get('/test-news', function (Request $request) {
 
     return response()->json(['status' => 'success'], 200);
 });
+
+Route::resource('articles', ArticleController::class)->middleware('auth:sanctum');
