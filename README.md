@@ -16,6 +16,8 @@ copy the contents of .env.example to your .env file
 
 run php artisan serve
 
+the app runs at 127.0.0.1:8000
+
 run the scheduler with command:
 
 php artisan schedule:work
