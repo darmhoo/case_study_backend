@@ -67,7 +67,7 @@ class GetNewsDataServices
                 $this->createArticle->handle($dummy);
             }
         } catch (\Throwable $th) {
-            throw $th;
+            // throw $th;
         }
     }
 
